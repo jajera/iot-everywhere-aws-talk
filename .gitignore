@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.slidev/
+*.local
+.DS_Store
+.tmp/
+.cursor/
+.env
+.env.*
+
+# Demo secrets / generated headers (never commit)
+demo/firmware/include/config.h
+demo/firmware/include/certs.h
+demo/firmware/certs/
+demo/firmware/.pio/
+demo/firmware/.dummy/
+demo/firmware/managed_components/
+demo/firmware/dependencies.lock
+demo/firmware/sdkconfig.*
+# Demo AWS deploy artifacts / secrets (never commit)
+demo/aws/out/
+demo/aws/**/*.pem
+demo/aws/**/*.pem.crt
+demo/aws/**/*.private.key
+demo/aws/**/*.public.key
+demo/aws/**/certificate-arn.txt
+demo/aws/**/iot-endpoint.txt
+demo/aws/**/certs.h
+demo/web/node_modules/
+demo/web/dist/
