@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Cite AWS claims",
+      "description": "After editing slides or demo docs, remind the agent to ground AWS behaviour in the source lock.",
+      "trigger": "PostFileSave",
+      "matcher": "(slides\\.md|demo/.*\\.(md|h|cpp|ini)|README\\.md)$",
+      "action": {
+        "type": "agent",
+        "prompt": "You just edited talk or demo material. Before moving on, check AWS behavioural claims against .kiro/steering/aws-source-lock.md. Keep wording neutral per .kiro/steering/neutral-language.md. Do not invent latency, pricing, or that the demo board is a seismic/GNSS instrument. Unverified behaviour stays qualified or omitted. Prefer the aws-docs MCP server over recall."
+      },
+      "enabled": true
+    }
+  ]
+}

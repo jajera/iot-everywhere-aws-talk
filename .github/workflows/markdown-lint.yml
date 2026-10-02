@@ -1,0 +1,34 @@
+name: Markdown Lint
+
+on:
+  pull_request: {}
+
+permissions:
+  statuses: write
+  checks: write
+  contents: read
+  pull-requests: read
+
+jobs:
+  markdown-lint:
+    uses: actionsforge/actions/.github/workflows/markdown-lint.yml@main
+    with:
+      # Slidev decks use ATX headings + HTML layout; keep demo/docs linted.
+      ignore: node_modules .kiro .slidev dist demo/firmware/managed_components demo/web/node_modules demo/firmware/.pio
+      config: |
+        {
+          "default": true,
+          "whitespace": false,
+          "line_length": false,
+          "ul-start-left": false,
+          "ul-indent": false,
+          "no-inline-html": false,
+          "no-bare-urls": false,
+          "fenced-code-language": false,
+          "first-line-h1": false,
+          "no-duplicate-heading": false,
+          "blanks-around-headings": false,
+          "no-emphasis-as-header": false,
+          "single-h1": false,
+          "heading-style": false
+        }
