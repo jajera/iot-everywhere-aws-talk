@@ -165,8 +165,16 @@ html.dark .path-step code {
 }
 
 html.dark .about {
-  margin-top: 1.75rem;
-  max-width: 40rem;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem 2.5rem;
+  align-items: center;
+  max-width: 52rem;
+}
+
+html.dark .about-copy {
+  min-width: 0;
 }
 
 html.dark .about-name {
@@ -235,6 +243,47 @@ html.dark .about-lines li {
   margin: 0;
   font-size: 1.05rem;
   color: var(--talk-muted);
+}
+
+html.dark .about-lines a {
+  color: #ffb84d;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 184, 77, 0.45);
+}
+
+html.dark .about-site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  flex: 0 0 auto;
+}
+
+html.dark .about-qr {
+  display: block;
+  width: 10.5rem;
+  height: auto;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .about-site-url {
+  font-family: var(--slidev-font-mono, ui-monospace, monospace);
+  font-size: 0.95rem;
+  color: #ffb84d;
+  text-decoration: none;
+}
+
+@media (max-width: 720px) {
+  html.dark .about {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  html.dark .about-site {
+    justify-self: start;
+  }
 }
 
 html.dark .iot-tease {
@@ -382,6 +431,46 @@ html.dark .path-grid--two .path-desc {
   font-size: 0.85rem;
 }
 
+html.dark .try-later {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1.75rem 0 1.5rem;
+  gap: 1.15rem;
+}
+
+html.dark .path-qr {
+  display: block;
+  width: 11.5rem;
+  height: auto;
+  margin: 0;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+html.dark .try-later-url {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+html.dark .try-later-url a,
+html.dark .try-later .path-desc a,
+html.dark .iot-tease a {
+  color: #ffb84d;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 184, 77, 0.45);
+}
+
+html.dark .try-later .path-desc {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+html.dark .try-later + .iot-tease {
+  margin-top: 1.75rem;
+}
+
 html.dark .path-step {
   position: relative;
   display: flex;
@@ -435,6 +524,16 @@ html.dark .dashboard-caption {
   border: 1px solid rgba(255, 153, 0, 0.35);
   font-size: 0.8rem;
   color: #ffb84d;
+}
+
+/* Thanks — meetup feedback QR */
+html.dark .thanks-qr {
+  display: block;
+  width: min(14rem, 42vw);
+  height: auto;
+  margin: 1.25rem auto 0.85rem;
+  border-radius: 0.5rem;
+  background: #fff;
 }
 
 /* Agenda — four numbered sections */
