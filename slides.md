@@ -45,40 +45,47 @@ layout: default
 # About me
 
 <div class="about">
-  <h2 class="about-name">John Ajera</h2>
-  <p class="about-role">
-    Platform engineer · Earth Sciences New Zealand (GeoNet)
-    <span class="about-seismic" title="Geohazards monitoring" aria-label="Seismic monitoring">
-      <svg class="about-seismic-svg" viewBox="0 0 64 24" aria-hidden="true">
-        <g class="about-seismic-trace">
-          <path
-            d="M0 12 H6 L9 12 L11 4 L13 20 L15 8 L17 16 L19 12 H26 L29 12 L31 3 L33 21 L35 7 L37 17 L39 12 H46 L49 12 L51 5 L53 19 L55 9 L57 15 L59 12 H64"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M64 12 H70 L73 12 L75 4 L77 20 L79 8 L81 16 L83 12 H90 L93 12 L95 3 L97 21 L99 7 L101 17 L103 12 H110 L113 12 L115 5 L117 19 L119 9 L121 15 L123 12 H128"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.75"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </g>
-      </svg>
-    </span>
-  </p>
-  <ul class="about-lines">
-    <li>AWS Community Builder · Network &amp; Content Delivery</li>
-    <li>AWS UG Leader · Wellington</li>
-  </ul>
+  <div class="about-copy">
+    <h2 class="about-name">John Ajera</h2>
+    <p class="about-role">
+      Platform engineer · Earth Sciences New Zealand (GeoNet)
+      <span class="about-seismic" title="Geohazards monitoring" aria-label="Seismic monitoring">
+        <svg class="about-seismic-svg" viewBox="0 0 64 24" aria-hidden="true">
+          <g class="about-seismic-trace">
+            <path
+              d="M0 12 H6 L9 12 L11 4 L13 20 L15 8 L17 16 L19 12 H26 L29 12 L31 3 L33 21 L35 7 L37 17 L39 12 H46 L49 12 L51 5 L53 19 L55 9 L57 15 L59 12 H64"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M64 12 H70 L73 12 L75 4 L77 20 L79 8 L81 16 L83 12 H90 L93 12 L95 3 L97 21 L99 7 L101 17 L103 12 H110 L113 12 L115 5 L117 19 L119 9 L121 15 L123 12 H128"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+        </svg>
+      </span>
+    </p>
+    <ul class="about-lines">
+      <li>AWS Community Builder · Network &amp; Content Delivery</li>
+      <li>AWS UG Leader · Wellington</li>
+    </ul>
+  </div>
+  <aside class="about-site">
+    <img class="about-qr" src="/qr-johna-kiwi.png" alt="QR code linking to https://johna.kiwi/" />
+    <a class="about-site-url" href="https://johna.kiwi/">https://johna.kiwi/</a>
+  </aside>
 </div>
 
 <!--
-Speaker: brief hello (~30 s). The trace after GeoNet stands for seismic / geohazards monitoring —
+Speaker: brief hello (~30 s). Point at the QR for johna.kiwi — labs and writing live there.
+The trace after GeoNet stands for seismic / geohazards monitoring —
 a sensor network that follows the same pattern as this talk, at a very different scale.
 -->
 
@@ -558,40 +565,23 @@ layout: default
 
 # Try it later
 
-<div class="path-grid path-grid--two">
-  <div class="path-step">
-    <ph-book-open class="path-icon" />
-    <span>Full lab</span>
-    <span class="path-desc"><a href="https://aws-iot-walkthrough.johna.kiwi/">aws-iot-walkthrough.johna.kiwi</a></span>
-    <span class="path-desc">one board, step by step, with explanations</span>
-  </div>
-  <div class="path-step">
-    <ph-terminal-window class="path-icon" />
-    <span>This talk's demo</span>
-    <span class="path-desc"><code>demo/</code> in the slides repo</span>
-    <span class="path-desc">C61 firmware, cloud scripts, Amplify dashboard</span>
-  </div>
-  <div class="path-step">
-    <ph-cpu class="path-icon" />
-    <span>Multi-board fleet</span>
-    <span class="path-desc"><a href="https://github.com/jajera/esp32-aws-iot-fleet">github.com/jajera/esp32-aws-iot-fleet</a></span>
-    <span class="path-desc">Ideaspark, S3, C3, CAM — provision + flash</span>
-  </div>
-  <div class="path-step">
-    <img class="aws-icon aws-icon--lg" src="/aws-icons/iot-core.svg" alt="" />
-    <span>Icons</span>
-    <span class="path-desc"><a href="https://aws-icons.johna.kiwi/">aws-icons.johna.kiwi</a></span>
-    <span class="path-desc">the AWS architecture icons on these slides</span>
-  </div>
+<div class="try-later">
+  <img class="path-qr" src="/qr-talk-demo.png" alt="QR code linking to https://github.com/jajera/iot-everywhere-aws-talk" />
+  <p class="try-later-url">
+    <a href="https://github.com/jajera/iot-everywhere-aws-talk">https://github.com/jajera/iot-everywhere-aws-talk</a>
+  </p>
+  <p class="path-desc">C61 firmware, cloud scripts, Amplify dashboard</p>
 </div>
 
 <p class="iot-tease">
   An ESP32 dev board, a USB data cable and an AWS account are enough to start.
+  Other boards: <a href="https://github.com/jajera/esp32-aws-iot-fleet">https://github.com/jajera/esp32-aws-iot-fleet</a>
+  · Lab: <a href="https://aws-iot-walkthrough.johna.kiwi/">https://aws-iot-walkthrough.johna.kiwi/</a>
 </p>
 
 <!--
-Speaker: walkthrough = hands-on one board; demo/ = what ran today (C61 + cloud); fleet repo = boards 2–6.
-Mention costs stay small at this scale but are not zero — delete the stack after trying it (teardown in demo/aws/README.md).
+Speaker: one QR — this talk's repo. Fleet and the full walkthrough stay as text links.
+Costs stay small — delete the stack after trying (teardown in demo/aws/README.md).
 -->
 
 ---
@@ -603,11 +593,10 @@ class: text-center
 
 Questions?
 
-<p class="iot-tease mx-auto">
-  Slides: this site · Lab: aws-iot-walkthrough.johna.kiwi
-</p>
+<img class="thanks-qr" src="/qr-iot-is-everywhere.png" alt="Feedback QR — IoT Is Everywhere, AWS UG Wellington Meetup October 2026" />
 
 <!--
+Speaker: QR is meetup feedback (feedbackfeijoa). Leave it up during Q&A.
 Audience talk ends here. Appendix follows for questions about deploy commands.
 -->
 
